@@ -1,0 +1,425 @@
+/* Reset & Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background: #0f172a;
+  color: #e2e8f0;
+  min-height: 100vh;
+}
+
+.app {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 24px;
+  overflow-x: hidden;
+}
+
+/* Header */
+.app-header {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.app-header h1 {
+  font-size: 2rem;
+  color: #f8fafc;
+  margin-bottom: 8px;
+}
+
+.app-subtitle {
+  color: #94a3b8;
+  font-size: 1rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Scoreboard */
+.scoreboard {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  margin-bottom: 24px;
+  padding: 16px;
+  background: #1e293b;
+  border-radius: 12px;
+  border: 1px solid #334155;
+}
+
+.score-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.score-label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #64748b;
+}
+
+.score-value {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #38bdf8;
+}
+
+/* Main Layout - Side by side: statements left, ratios right */
+.main-layout {
+  display: grid;
+  grid-template-columns: 1fr 650px;
+  gap: 24px;
+  align-items: start;
+  overflow: hidden;
+}
+
+/* Left Panel - Financial Statements */
+.left-panel {
+  background: #1e293b;
+  border-radius: 12px;
+  padding: 20px;
+  border: 1px solid #334155;
+  overflow-x: hidden;
+}
+
+.financial-data-panel h2 {
+  font-size: 1.25rem;
+  color: #f8fafc;
+  margin-bottom: 4px;
+}
+
+.panel-subtitle {
+  font-size: 0.85rem;
+  color: #64748b;
+  margin-bottom: 4px;
+}
+
+.panel-drag-hint {
+  font-size: 0.85rem;
+  color: #38bdf8;
+  margin-bottom: 12px;
+  font-weight: 500;
+}
+
+.statement-section {
+  margin-bottom: 16px;
+}
+
+.statements-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.sub-section-header {
+  margin-top: 16px;
+}
+
+.statement-section h3 {
+  font-size: 0.95rem;
+  color: #38bdf8;
+  margin-bottom: 8px;
+  padding-bottom: 4px;
+  border-bottom: 1px solid #334155;
+}
+
+.financial-table {
+  width: 100%;
+  font-size: 0.9rem;
+  border-collapse: collapse;
+}
+
+.financial-table th {
+  text-align: left;
+  padding: 6px 10px;
+  color: #94a3b8;
+  font-weight: 600;
+  border-bottom: 1px solid #334155;
+}
+
+.financial-table td {
+  padding: 7px 10px;
+  color: #cbd5e1;
+}
+
+.financial-table .amount {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+.financial-table .total-row td {
+  font-weight: 700;
+  color: #f8fafc;
+  border-top: 1px solid #475569;
+}
+
+/* Draggable rows in the financial table */
+.financial-table .draggable-row {
+  cursor: grab;
+  border-radius: 4px;
+  transition: all 0.15s ease;
+}
+
+.financial-table .draggable-row td {
+  background: rgba(59, 130, 246, 0.08);
+  border-left: 3px solid #3b82f6;
+}
+
+.financial-table .draggable-row:hover td {
+  background: rgba(59, 130, 246, 0.18);
+}
+
+.financial-table .draggable-row:active {
+  cursor: grabbing;
+}
+
+.drag-icon {
+  margin-right: 6px;
+  color: #3b82f6;
+  font-size: 0.85rem;
+}
+
+/* Drag Overlay */
+.drag-overlay-item {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 10px 16px;
+  background: #1e3a5f;
+  border: 2px solid #60a5fa;
+  border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(59, 130, 246, 0.3);
+  pointer-events: none;
+}
+
+.drag-overlay-item .item-label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #e2e8f0;
+}
+
+.drag-overlay-item .item-value {
+  font-size: 0.72rem;
+  color: #94a3b8;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Right Panel - Ratio Cards */
+.right-panel {
+  position: sticky;
+  top: 24px;
+  max-height: 85vh;
+  overflow-y: auto;
+  padding-right: 8px;
+}
+
+.right-panel h2 {
+  font-size: 1.1rem;
+  color: #f8fafc;
+  margin-bottom: 4px;
+}
+
+.panel-instruction {
+  font-size: 0.8rem;
+  color: #64748b;
+  margin-bottom: 12px;
+}
+
+.ratio-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.ratio-card {
+  background: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 12px;
+  padding: 16px;
+  transition: all 0.3s ease;
+}
+
+.ratio-card.correct {
+  border-color: #22c55e;
+  background: #0f2a1a;
+}
+
+.ratio-card.incorrect {
+  border-color: #ef4444;
+  background: #2a0f0f;
+}
+
+.ratio-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.ratio-header h3 {
+  font-size: 0.95rem;
+  color: #f8fafc;
+  font-weight: 700;
+}
+
+.ratio-formula-label {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #f8fafc;
+}
+
+.clear-btn {
+  background: #475569;
+  border: none;
+  color: #e2e8f0;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.15s;
+}
+
+.clear-btn:hover {
+  background: #ef4444;
+}
+
+/* Formula Area */
+.ratio-formula-area {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.drop-zone {
+  flex: 1;
+  min-height: 44px;
+  border: 2px dashed #475569;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 12px;
+  transition: all 0.2s ease;
+}
+
+.drop-zone-over {
+  border-color: #3b82f6;
+  background: rgba(59, 130, 246, 0.1);
+  box-shadow: 0 0 12px rgba(59, 130, 246, 0.2);
+}
+
+.drop-zone-filled {
+  border-style: solid;
+  border-color: #64748b;
+  background: #0f172a;
+}
+
+.placeholder {
+  font-size: 0.75rem;
+  color: #64748b;
+  font-style: italic;
+}
+
+.dropped-label {
+  font-size: 0.8rem;
+  color: #e2e8f0;
+  font-weight: 500;
+}
+
+.divider-line {
+  font-size: 1.2rem;
+  color: #64748b;
+  font-weight: 700;
+}
+
+/* Result */
+.ratio-result {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 8px;
+  padding-top: 8px;
+  border-top: 1px solid #334155;
+}
+
+.result-calculation {
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+  font-variant-numeric: tabular-nums;
+}
+
+.result-value {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #f8fafc;
+}
+
+.result-feedback {
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.correct-feedback {
+  color: #22c55e;
+}
+
+.incorrect-feedback {
+  color: #ef4444;
+}
+
+/* Hint */
+.ratio-hint {
+  margin-top: 4px;
+}
+
+.hint-text {
+  font-size: 0.72rem;
+  color: #64748b;
+  font-style: italic;
+}
+
+/* Scrollbar styling */
+.right-panel::-webkit-scrollbar {
+  width: 6px;
+}
+
+.right-panel::-webkit-scrollbar-track {
+  background: #1e293b;
+}
+
+.right-panel::-webkit-scrollbar-thumb {
+  background: #475569;
+  border-radius: 3px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .main-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .left-panel {
+    max-height: none;
+    position: static;
+  }
+
+  .scoreboard {
+    gap: 16px;
+  }
+
+  .app-header h1 {
+    font-size: 1.5rem;
+  }
+}
