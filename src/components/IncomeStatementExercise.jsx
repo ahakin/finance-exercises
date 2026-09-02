@@ -61,7 +61,7 @@ function IncomeStatementHeader() {
       <h2>{financialStatements.company}</h2>
       <p className="statement-main-title">CONSOLIDATED FINANCIAL STATEMENTS</p>
       <p className="statement-units">(in millions of U.S. dollars)</p>
-      <h3>Income Statement</h3>
+      <h3>Consolidated Income Statement</h3>
       <div className="income-exercise-period">
         <span>Year Ended</span>
         <span>Sept. 27, 2025</span>
