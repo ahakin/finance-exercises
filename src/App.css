@@ -335,6 +335,10 @@ body {
   text-align: center;
 }
 
+.balance-exercise-period {
+  width: 120px;
+}
+
 .income-drop-list,
 .income-bank-list {
   display: flex;
