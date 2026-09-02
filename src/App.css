@@ -44,6 +44,13 @@ body {
   color: #3f6473;
 }
 
+.exercise-page-instruction {
+  margin: 0 auto;
+  color: #5f5f5a;
+  font-size: 0.88rem;
+  line-height: 1.35;
+}
+
 /* Main Layout - Side by side: statements left, ratios right */
 .main-layout {
   display: grid;

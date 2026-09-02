@@ -253,6 +253,16 @@ function App() {
         <>
         <header className="app-header">
           <h1>{incomeStatementOnly ? "Income Statement" : balanceSheetOnly ? "Balance Sheet" : "Financial Ratios: Drag and Drop Exercises"}</h1>
+          {incomeStatementOnly && (
+            <p className="exercise-page-instruction">
+              Build the income statement by dragging each item and value into the correct order.
+            </p>
+          )}
+          {balanceSheetOnly && (
+            <p className="exercise-page-instruction">
+              Build the balance sheet by dragging each item and value into the appropriate section and correct order.
+            </p>
+          )}
           {incomeStatementOnly || balanceSheetOnly ? (
             <a className="page-link" href="#/">Return to Homepage</a>
           ) : (
