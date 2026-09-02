@@ -13,8 +13,9 @@ const exercises = [
   },
   {
     href: "#/profitability-ratios",
-    title: "Profitability Ratios",
-    description: "Build and calculate profitability ratios with financial statement values.",
+    title: "Financial Ratios",
+    description: "Drag from the financial statements and drop it to the formulas to calculate the ratios.",
+    disabled: true,
   },
 ];
 
@@ -40,16 +41,27 @@ export default function HomePage() {
       <section className="home-exercises" aria-labelledby="exercise-heading">
         <h2 id="exercise-heading">Choose an Exercise</h2>
         <div className="home-exercise-grid">
-          {exercises.map((exercise, index) => (
-            <a className="home-exercise-card" href={exercise.href} key={exercise.href}>
+          {exercises.map((exercise, index) => {
+            const Card = exercise.disabled ? "div" : "a";
+
+            return (
+            <Card
+              className={`home-exercise-card ${exercise.disabled ? "is-disabled" : ""}`}
+              href={exercise.disabled ? undefined : exercise.href}
+              aria-disabled={exercise.disabled || undefined}
+              key={exercise.href}
+            >
               <span className="home-exercise-number" aria-hidden="true">
                 {String(index + 1).padStart(2, "0")}
               </span>
               <h3>{exercise.title}</h3>
               <p>{exercise.description}</p>
-              <span className="home-card-action">Start exercise →</span>
-            </a>
-          ))}
+              <span className="home-card-action">
+                {exercise.disabled ? "Coming soon" : "Start exercise →"}
+              </span>
+            </Card>
+            );
+          })}
         </div>
       </section>
     </main>

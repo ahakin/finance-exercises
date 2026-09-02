@@ -159,6 +159,20 @@ body {
   transform: translateY(-4px);
 }
 
+.home-exercise-card.is-disabled {
+  cursor: default;
+}
+
+.home-exercise-card.is-disabled:hover {
+  border-color: #bebeb8;
+  box-shadow: none;
+  transform: none;
+}
+
+.home-exercise-card.is-disabled .home-card-action {
+  color: #777771;
+}
+
 .home-exercise-number {
   margin-bottom: 12px;
   color: #7a3045;
