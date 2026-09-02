@@ -430,11 +430,14 @@ body {
   font-size: 0.8rem;
 }
 
-.statement-source {
-  margin: 6px 0 0;
-  color: #5f5f5a;
-  font-size: 0.68rem;
+.exercise-source-note {
+  max-width: 1200px;
+  margin: 12px auto 0;
+  color: #a8b4c5;
+  font-size: 0.72rem;
   font-style: italic;
+  line-height: 1.35;
+  text-align: center;
 }
 
 .income-bank-item {

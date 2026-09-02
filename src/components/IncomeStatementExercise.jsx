@@ -91,7 +91,6 @@ export default function IncomeStatementExercise({ drops, errors, onReset }) {
           ))}
         </div>
         {completed && <p className="income-complete-message">Income statement completed correctly!</p>}
-        <p className="statement-source">Source: Apple Inc., 2025 Form 10-K.</p>
       </section>
 
       <section className="income-exercise-column income-item-bank">

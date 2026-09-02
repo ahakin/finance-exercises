@@ -348,6 +348,10 @@ function App() {
           </section>
         </div>
         )}
+        <footer className="exercise-source-note">
+          Source: Apple Inc., 2025 Form 10-K. This independent educational exercise is
+          not affiliated with or endorsed by Apple Inc.
+        </footer>
         </>
         )}
       </div>
