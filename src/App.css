@@ -580,6 +580,13 @@ body {
   text-underline-offset: 2px;
 }
 
+.page-link-top {
+  display: block;
+  width: max-content;
+  margin: 0 0 8px;
+  text-align: left;
+}
+
 .page-link-separator {
   color: #777771;
 }

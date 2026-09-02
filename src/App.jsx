@@ -252,6 +252,7 @@ function App() {
         ) : (
         <>
         <header className="app-header">
+          <a className="page-link page-link-top" href="#/">Return to Homepage</a>
           <h1>{incomeStatementOnly ? "Income Statement" : balanceSheetOnly ? "Balance Sheet" : "Financial Ratios: Drag and Drop Exercises"}</h1>
           {incomeStatementOnly && (
             <p className="exercise-page-instruction">
@@ -263,17 +264,12 @@ function App() {
               <strong>Instruction:</strong> Build the balance sheet by dragging each item and value into the appropriate section and correct order.
             </p>
           )}
-          {incomeStatementOnly || balanceSheetOnly ? (
-            <a className="page-link" href="#/">Return to Homepage</a>
-          ) : (
-            <>
-              <p className="app-subtitle">
-                <strong className="instructions-label">Instructions:</strong> Drag from
-                the financial statements and drop it to the formulas to calculate the
-                ratios.
-              </p>
-              <a className="page-link" href="#/">Return to Homepage</a>
-            </>
+          {!incomeStatementOnly && !balanceSheetOnly && (
+            <p className="app-subtitle">
+              <strong className="instructions-label">Instructions:</strong> Drag from
+              the financial statements and drop it to the formulas to calculate the
+              ratios.
+            </p>
           )}
         </header>
 
