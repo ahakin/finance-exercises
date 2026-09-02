@@ -362,6 +362,16 @@ body {
   text-align: center;
 }
 
+.income-statement-exercise-period {
+  position: static;
+  display: block;
+  width: auto;
+  margin-top: 0;
+  font-size: 0.72rem;
+  line-height: 1.1;
+  text-align: center;
+}
+
 .balance-exercise-statement-header,
 .balance-ordering-exercise .income-bank-header {
   min-height: 82px;
