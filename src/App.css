@@ -46,9 +46,15 @@ body {
 
 .exercise-page-instruction {
   margin: 0 auto;
-  color: #5f5f5a;
-  font-size: 0.88rem;
-  line-height: 1.35;
+  color: #294d5c;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.exercise-page-instruction strong {
+  color: #7a3045;
+  font-weight: 800;
 }
 
 /* Main Layout - Side by side: statements left, ratios right */
