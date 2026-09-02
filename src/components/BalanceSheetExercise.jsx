@@ -104,13 +104,12 @@ export default function BalanceSheetExercise({ drops, errors, onReset }) {
   return (
     <div className="income-ordering-exercise balance-ordering-exercise">
       <section className="income-exercise-column income-exercise-target">
-        <div className="income-exercise-statement-header">
+        <div className="income-exercise-statement-header balance-exercise-statement-header">
           <h2>{financialStatements.company}</h2>
           <p className="statement-main-title">CONSOLIDATED BALANCE SHEET</p>
           <p className="statement-units">(in millions of U.S. dollars)</p>
           <div className="income-exercise-period balance-exercise-period">
-            <span>As of</span>
-            <span>September 27, 2025</span>
+            <span>As of September 27, 2025</span>
           </div>
         </div>
         <div className="income-drop-list">
