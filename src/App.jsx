@@ -244,7 +244,7 @@ function App() {
       onDragStart={handleDragStart}
       onDragEnd={handleDragEnd}
     >
-      <div className="app">
+      <div className={`app ${incomeStatementOnly ? "income-route-app" : ""}`}>
         {homePage ? (
           <HomePage />
         ) : (
